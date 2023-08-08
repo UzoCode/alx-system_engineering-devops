@@ -1,0 +1,5 @@
+#!/bin/bash
+find . -type f -name '.gif' | \
+sed -E 's|^.*/([^/]+)\.'gif$|\1|' | \
+sort -f | \
+sed '/^[[:space:]]*$/d'
